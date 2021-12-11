@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { PrmaryButon } from "./components/atoms/button/PrimaryButton";
+import { SeconderyButon } from "./components/atoms/button/SeconderyButton";
+import "./App.css";
+import { SearchInput } from "./components/molecules/searchInput";
+import { UserCard } from "./components/organisms/user/UserCard";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PrmaryButon>テストです</PrmaryButon>
+      <SeconderyButon>検索</SeconderyButon>
+      <br />
+      <SearchInput />
+      <UserCard />
     </div>
   );
 }
-
-export default App;
