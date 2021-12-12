@@ -5,12 +5,12 @@ import { SearchInput } from "./components/molecules/searchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 
 const user = {
-  name: "yamada",
+  name: "山田",
   image: "https://source.unsplash.com/CM1oVEUzsNM",
   email: "yamadag@mail.com",
   phone: "090900000",
   company: {
-    name: "テスト株式会社",
+    name: "株式会社 山田商会",
   },
   website: "https://www.yamada/com",
 };
