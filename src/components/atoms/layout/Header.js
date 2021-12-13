@@ -18,6 +18,8 @@ const SHeader = styled.header`
   color: #fff;
   text-align: center;
   padding: 8px 0;
+  margin-bottom: 10px;
+  width: 100%;
 `;
 
 const SLink = styled(Link)`

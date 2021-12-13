@@ -5,6 +5,7 @@ import { SearchInput } from "./components/molecules/searchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 import { HeaderOnly } from "./components/template/HeaderOnly";
 import { BrowserRouter } from "react-router-dom";
+import { DefaultLayout } from "./components/template/DefaultLayout";
 
 const user = {
   name: "山田",
@@ -21,12 +22,13 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <HeaderOnly />
-        <PrmaryButon>テストです</PrmaryButon>
-        <SeconderyButon>検索</SeconderyButon>
-        <br />
-        <SearchInput />
-        <UserCard user={user} />
+        <DefaultLayout>
+          <PrmaryButon>テストです</PrmaryButon>
+          <SeconderyButon>検索</SeconderyButon>
+          <br />
+          <SearchInput />
+          <UserCard user={user} />
+        </DefaultLayout>
       </BrowserRouter>
     </div>
   );
