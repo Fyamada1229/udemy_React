@@ -3,6 +3,8 @@ import { SeconderyButon } from "./components/atoms/button/SeconderyButton";
 import "./App.css";
 import { SearchInput } from "./components/molecules/searchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
+import { HeaderOnly } from "./components/template/HeaderOnly";
+import { BrowserRouter } from "react-router-dom";
 
 const user = {
   name: "山田",
@@ -18,11 +20,14 @@ const user = {
 export default function App() {
   return (
     <div className="App">
-      <PrmaryButon>テストです</PrmaryButon>
-      <SeconderyButon>検索</SeconderyButon>
-      <br />
-      <SearchInput />
-      <UserCard user={user} />
+      <BrowserRouter>
+        <HeaderOnly />
+        <PrmaryButon>テストです</PrmaryButon>
+        <SeconderyButon>検索</SeconderyButon>
+        <br />
+        <SearchInput />
+        <UserCard user={user} />
+      </BrowserRouter>
     </div>
   );
 }
