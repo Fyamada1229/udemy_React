@@ -6,30 +6,8 @@ import { UserCard } from "./components/organisms/user/UserCard";
 import { HeaderOnly } from "./components/template/HeaderOnly";
 import { BrowserRouter } from "react-router-dom";
 import { DefaultLayout } from "./components/template/DefaultLayout";
-
-const user = {
-  name: "山田",
-  image: "https://source.unsplash.com/CM1oVEUzsNM",
-  email: "yamadag@mail.com",
-  phone: "090900000",
-  company: {
-    name: "株式会社 山田商会",
-  },
-  website: "https://www.yamada/com",
-};
+import { Router } from "./router/Router";
 
 export default function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <DefaultLayout>
-          <PrmaryButon>テストです</PrmaryButon>
-          <SeconderyButon>検索</SeconderyButon>
-          <br />
-          <SearchInput />
-          <UserCard user={user} />
-        </DefaultLayout>
-      </BrowserRouter>
-    </div>
-  );
+  return <Router />;
 }
