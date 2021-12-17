@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const UserIconWithName = (props) => {
   const { image, name } = props;
+  console.log(props);
   return (
     <SContainer>
       <SImg height={160} width={160} src={image} alt={name} />
       <SName>{name}</SName>
-      <h1>{props.yamada}</h1>
+      <h1>
+        {props.yamada}:{props.id}
+      </h1>
     </SContainer>
   );
 };
