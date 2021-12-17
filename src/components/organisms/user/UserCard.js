@@ -5,9 +5,10 @@ import { UserIconWithName } from "../../molecules/user/UserlconWithName";
 export const UserCard = (props) => {
   const { user } = props;
 
+  const Yamada = "yamada";
   return (
     <Card>
-      <UserIconWithName image={user.image} name={user.name} />
+      <UserIconWithName image={user.image} name={user.name} yamada={Yamada} />
       <SDL>
         <dl>
           <dt>メール</dt>
