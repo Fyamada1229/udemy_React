@@ -7,9 +7,7 @@ export const UserIconWithName = (props) => {
     <SContainer>
       <SImg height={160} width={160} src={image} alt={name} />
       <SName>{name}</SName>
-      <h1>
-        {props.yamada}:{props.id}
-      </h1>
+      <h1>No.{props.id}</h1>
     </SContainer>
   );
 };
