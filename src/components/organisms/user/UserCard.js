@@ -3,8 +3,7 @@ import { Card } from "../../atoms/card/Card";
 import { UserIconWithName } from "../../molecules/user/UserlconWithName";
 
 export const UserCard = (props) => {
-  const { user, isAdmin } = props;
-  console.log(isAdmin);
+  const { user } = props;
 
   const Yamada = "山田です";
   return (
@@ -14,7 +13,6 @@ export const UserCard = (props) => {
         name={user.name}
         yamada={Yamada}
         id={user.id}
-        isAdmin={isAdmin}
       />
       <SDL>
         <dl>
