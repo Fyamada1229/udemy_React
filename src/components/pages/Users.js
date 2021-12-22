@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SeconderyButon } from "../atoms/button/SeconderyButton";
 import { SearchInput } from "../molecules/searchInput";
 import { UserCard } from "../organisms/user/UserCard";
 
@@ -21,6 +22,8 @@ export const Users = () => {
     <SContainer>
       <h2>Users一覧です</h2>
       <SearchInput />
+      <br />
+      <SeconderyButon>切り替え</SeconderyButon>
       <SUserArea>
         {users.map((user) => (
           <UserCard key={user.id} user={user} />
