@@ -1,4 +1,7 @@
+import { Switch } from "react-router";
 import styled from "styled-components";
+import React, { useContext } from "react";
+import { UserContext } from "../../providers/UserProvider";
 import { SeconderyButon } from "../atoms/button/SeconderyButton";
 import { SearchInput } from "../molecules/searchInput";
 import { UserCard } from "../organisms/user/UserCard";
@@ -18,12 +21,16 @@ const users = [...Array(10).keys()].map((val) => {
 });
 
 export const Users = () => {
+  const { userInfo, setUserInfo } = useContext(UserContext);
+
+  console.log(userInfo);
+  const onClickSwitch = () => setUserInfo({ isAdmin: !userInfo.isAdmin });
   return (
     <SContainer>
       <h2>Users一覧です</h2>
       <SearchInput />
       <br />
-      <SeconderyButon>切り替え</SeconderyButon>
+      <SeconderyButon onClick={onClickSwitch}>切り替え</SeconderyButon>
       <SUserArea>
         {users.map((user) => (
           <UserCard key={user.id} user={user} />
