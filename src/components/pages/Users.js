@@ -1,6 +1,6 @@
 import { Switch } from "react-router";
 import styled from "styled-components";
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import { UserContext } from "../../providers/UserProvider";
 import { SeconderyButon } from "../atoms/button/SeconderyButton";
 import { SearchInput } from "../molecules/searchInput";
@@ -20,10 +20,9 @@ const users = [...Array(10).keys()].map((val) => {
   };
 });
 
-export const Users = () => {
+export const Users = memo(() => {
   const { userInfo, setUserInfo } = useContext(UserContext);
 
-  console.log(userInfo);
   const onClickSwitch = () => setUserInfo({ isAdmin: !userInfo.isAdmin });
   return (
     <SContainer>
@@ -38,7 +37,7 @@ export const Users = () => {
       </SUserArea>
     </SContainer>
   );
-};
+});
 
 const SContainer = styled.div`
   display: flex;
