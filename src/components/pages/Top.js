@@ -24,7 +24,7 @@ export const Top = () => {
     <SContainer>
       <h2>TOPページです</h2>
       <p>表示切り替え</p>
-      <SeconderyButon onClick={onClickAidmin}>管理者ユーザー</SeconderyButon>
+      <SeconderyButon onClick={onClickAidmin}>管理者ユーザ</SeconderyButon>
       <br />
       <br />
       <SeconderyButon onClick={onClickGeneral}>ユーザ</SeconderyButon>
