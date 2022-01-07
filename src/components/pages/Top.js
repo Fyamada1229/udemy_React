@@ -22,7 +22,7 @@ export const Top = () => {
 
   return (
     <SContainer>
-      <h2>TOPページ</h2>
+      <h1>TOPページ</h1>
       <SeconderyButon onClick={onClickAidmin}>管理者ユーザ</SeconderyButon>
       <br />
       <br />
